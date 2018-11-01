@@ -1,5 +1,7 @@
 body{
   font-family: 'Open Sans', sans-serif;
+  background-repeat: no-repeat;
+
 }
 .scrollbar{
     -ms-scrollbar-base-color:orange;
