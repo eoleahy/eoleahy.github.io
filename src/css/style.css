@@ -7,6 +7,10 @@ body{
     -ms-scrollbar-base-color:orange;
     margin-bottom: 100%
 }
+.button{
+  background-color:inherit;
+
+}
 
 a.linkButton{
     position: relative;
