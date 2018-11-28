@@ -46,14 +46,6 @@
     .sidenav a {font-size: 18px;}
 }
 
-body {
-    -ms-scrollbar-base-color: orange;
-    margin-bottom: 50%;
-    background-image:url('src/resource/images/hackerman.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
 
 * {
   box-sizing: border-box;
