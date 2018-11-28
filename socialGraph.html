@@ -6,6 +6,30 @@
     <link rel ="stylesheet" type="text/css" href="src/css/style.css">
 </head>
     <body>
-        <a href="index.html" class="linkButton">Home</a>
+        <div class="header">
+            <h1>CS3012 Github Social Graph</h1>
+            <p>Still being implemented</p>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="https://reddit.com/r/me_irl">Misc</a>
+            <a href="https://github.com/eoleahy">Github</a>
+            <a href="https://www.linkedin.com/in/eoin-leahy-055233157/">LinkedIn</a>
+            <a href="index.html">Home</a>
+        </div>
+        <div class="main">
+            <!-- Load icon library -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+            <!-- The form -->
+            <form class="searchBox" onsubmit="inputRec();">
+                <input type="text" placeholder="Enter Github Username..." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div> <!-- end main -->
+        <<script type="text/javascript">
+            function inputRec(){
+                window.alert("Thanks for the input but this is only placeholder");
+            }
+        </script>
     </body>
 </html>
