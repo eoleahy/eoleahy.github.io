@@ -84,3 +84,11 @@ form.searchBox::after {
   clear: both;
   display: table;
 }
+
+.emailForm{
+    color: white;
+    position: fixed;
+    left:50%;
+    top:50%;
+
+}
