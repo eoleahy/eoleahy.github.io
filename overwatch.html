@@ -4,7 +4,6 @@
 <head>
     <title>OW scrapper</title>
     <meta charset="utf-8">
-    </meta>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -24,21 +23,34 @@
         <!-- Load icon library -->
 
         <!-- The form -->
-        <form class="searchBox" onsubmit="getInfo();">
-            <input type="text" placeholder="Enter BattleNet name..." name="search">
+     
+        <input type="text" placeholder="Enter BattleNet name..." name="search">
             <button type="submit"><i class="fa fa-search"></i></button>
         </form>
+
+        <div id = "info">
+
+        </div>
     </div> <!-- end main -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $("button").click(function(){
-                $.get("https://ow-api.com/v1/stats/pc/eu/Slinky#21792/profile" , function(data, status){
-                    alert("Data: " + data + "\nStatus", status);
-                });
-            });
-        });
+        function getInfo() {
         
+            var request = $.ajax({
+                url: "https://ow-api.com/v1/stats/pc/eu/Slinky#21792/profile",
+                type: "GET",
+                dataType: "JSON"
+            });
+
+            request.done((res) => {
+                $("#info").html(res);
+                console.log(res);
+            });
+
+            request.fail((jqXHR, res) => {
+                alert("Request failed: " + res );
+            });
+        }
     </script>
 </body>
 
