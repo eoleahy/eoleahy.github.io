@@ -1,3 +1,4 @@
+
 .header {
     margin-top: -10px;
     margin-right:  -10px;
@@ -84,4 +85,12 @@ form.searchBox::after {
   content: "";
   clear: both;
   display: table;
+}
+
+.emailForm{
+    color: white;
+    position: fixed;
+    left:50%;
+    top:50%;
+
 }
