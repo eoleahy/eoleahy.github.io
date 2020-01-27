@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>OW scrapper</title>
+    <meta charset="utf-8">
+    </meta>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Overwatch Scapper</h1>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <!--  <a href="https://reddit.com/r/me_irl">Misc</a>-->
+        <a href="https://github.com/eoleahy">Personal Github</a>
+        <a href="https://github.com/eoleahy1">Collegey Github</a>
+        <a href="https://www.linkedin.com/in/eoin-leahy-055233157/">LinkedIn</a>
+        <a href="index.html">Home</a>
+    </div>
+    <div class="main">
+        <!-- Load icon library -->
+
+        <!-- The form -->
+        <form class="searchBox" onsubmit="getInfo();">
+            <input type="text" placeholder="Enter BattleNet name..." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div> <!-- end main -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.get(`https://ow-api.com/v1/stats/pc/eu/Slinky#21972/` , function(data, status){
+                    alert("Data: " + data + "\nStatus", status);
+                });
+            });
+        });
+        
+    </script>
+</body>
+
+</html>
